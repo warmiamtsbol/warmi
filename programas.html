@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce los programas de Warmi A.M.T.S. enfocados en empoderamiento, salud, apoyo psicológico, incidencia política y más.">
+    <title>Nuestros Programas - Warmi Amts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main class="content-section">
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestros Programas</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Organizamos, defendemos y cuidamos juntas. Cada programa nace de nuestra lucha colectiva.</p>
+                
+                <!-- Grid de Programas (3 columnas en pantallas grandes) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Tarjeta 1: Empoderamiento -->
+                    <a href="programa-empoderamiento.html" class="program-card-v2">
+                        <img src="images/fittipizarra.jpg" alt="Mujeres en un taller de liderazgo" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Talleres de Empoderamiento</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Formación en oratoria, liderazgo y autogestión para fortalecer nuestras voces.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 2: Apoyo Psicológico -->
+                    <a href="programa-psicologico.html" class="program-card-v2">
+                        <img src="images/taller angeles.jpg" alt="Una sesión de apoyo y escucha" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Apoyo Psicológico</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Espacios seguros de escucha, contención y construcción de resiliencia.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 3: Salud y Prevención -->
+                    <a href="programa-salud.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-06-25 at 00.17.16.jpeg" alt="Material de prevención de ITS" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Salud y Prevención</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Charlas, pruebas, kits y acceso a salud integral (VIH/ITS) sin estigma.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 4: Incidencia Política -->
+                    <a href="programa-politica.html" class="program-card-v2">
+                        <img src="images/hablando con personas.jpg" alt="Reunión con autoridades" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Incidencia Política</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Reuniones, propuestas de ley y lucha por el reconocimiento de nuestros derechos.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 5: Visitas Comunitarias -->
+                    <a href="programa-visitas.html" class="program-card-v2">
+                        <img src="images/visita2025dentro.jpg" alt="Miembros de Warmi visitando a compañeras" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Acompañamiento Comunitario</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Visitamos puntos de trabajo para orientar, repartir kits y apoyar a las compañeras.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 6: Redes y Alianzas -->
+                    <a href="programa-alianzas.html" class="program-card-v2">
+                        <img src="images/redtrasex.jpg" alt="Logos de organizaciones aliadas" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Redes y Alianzas</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Tejemos redes con el movimiento feminista, RedTraSex e instituciones amigas.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 7: Talleres y Sensibilización -->
+                    <a href="programa-sensibilizacion.html" class="program-card-v2">
+                        <img src="images/senzibilizacionpolicias.jpg" alt="Charla de sensibilización a la comunidad" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Talleres y Espacios de Sensibilización</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Charlas abiertas para educar a la comunidad, policía, prensa y universidades.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                    <!-- Tarjeta 8: Espacios Seguros -->
+                    <a href="programa-espacios-seguros.html" class="program-card-v2 program-card-special">
+                        <img src="images/tallerantiguo.jpg" alt="Ilustración de un espacio seguro y acogedor" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Espacios Seguros</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Nuestra meta: crear refugios y espacios de acogida con servicios integrales.</p>
+                            <span class="program-card-btn">Ver más</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Llamado a la Acción Final -->
+        <section class="cta-violence-section">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">¿Quieres sumarte, donar o ser voluntaria?</h3>
+                <p class="text-lg md:text-xl mb-6">Contáctanos y únete a la lucha por la dignidad y los derechos de todas.</p>
+                <a href="involucrate.html" class="bg-white text-red-700 font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg">
+                    Contactar a WARMI
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contacto" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p>
+            <p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p>
+            <div class="mt-8 border-t border-gray-700 text-center py-6">
+                <p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ofrecemos un espacio seguro de apoyo psicológico para trabajadoras sexuales. Conoce nuestros servicios de terapia individual y talleres grupales.">
+    <title>Apoyo Psicológico - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para esta página con la nueva paleta de color Malva Pastel -->
+    <style>
+        /* Definición de la nueva paleta de colores */
+        :root {
+            --mauve-main: #B794B7; /* Tono malva principal */
+            --mauve-dark: #8E6C8E;  /* Tono malva oscuro para textos y fondos */
+            --mauve-light: #F5EEF5; /* Tono malva muy claro para fondos suaves */
+        }
+
+        .program-hero-psicologia {
+            background-image: linear-gradient(rgba(142, 108, 142, 0.8), rgba(0, 0, 0, 0.7)), url('images/placeholder-programa-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .custom-list li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .custom-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            /* Icono actualizado con el nuevo color malva */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B794B7'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-size: contain;
+        }
+
+        .highlight-box-mauve {
+            background-color: var(--mauve-light);
+            border-left: 5px solid var(--mauve-main);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        /* Sobrescribimos las clases de color de Tailwind con nuestros tonos malva */
+        .text-accent { color: var(--mauve-dark); }
+        .bg-accent { background-color: var(--mauve-dark); }
+        .text-accent-light { color: var(--mauve-main); }
+        .button-accent {
+            background-color: white;
+            color: var(--mauve-dark);
+        }
+        .button-accent:hover {
+            background-color: var(--mauve-light);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION DEL PROGRAMA -->
+        <section class="program-hero-psicologia pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold">Un Espacio para Soltar el Peso y Sanar</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section bg-white">
+            <div class="max-w-4xl mx-auto px-6 py-12">
+
+                <div class="text-center mb-12">
+                     <p class="text-lg text-gray-700 leading-relaxed">La carga de la violencia, ya sea de una pareja, de la familia o de las propias instituciones. El peso del estigma y la necesidad de ocultar quién eres. La ansiedad y el estrés que nacen de la explotación laboral y la falta de derechos. Entendemos que el día a día es una lucha constante y que, a menudo, esa batalla se libra en silencio.</p>
+                     <p class="text-lg text-gray-700 leading-relaxed mt-4 font-semibold">En Warmi AMTS creemos que tu bienestar mental no es un lujo, es una necesidad fundamental. Por eso, hemos creado este espacio de apoyo, pensado para ser un primer paso hacia la sanación, un lugar donde tu historia importa y tu voz es escuchada sin juicios.</p>
+                </div>
+        
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center text-accent mb-6">Apoyo a Tu Alcance</h2>
+                    <p class="text-center text-gray-600 mb-8">Si bien estamos trabajando para ampliar nuestros servicios, este es el apoyo que podemos ofrecerte ahora mismo para empezar a cuidarte:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-xl mb-2">Terapia Individual</h3>
+                            <p>Una conversación uno a uno, confidencial y directa con nuestra psicóloga aliada. Es un espacio para ti, para explorar lo que sientes y encontrar herramientas para afrontar tus desafíos. Este servicio se ofrece con un coste mínimo, pensado para ser lo más accesible posible mientras buscamos los fondos para que sea totalmente gratuito.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-xl mb-2">Talleres Grupales de Psicología</h3>
+                            <p>En un ambiente de confianza entre compañeras, abordamos temas clave para nuestro bienestar, como:</p>
+                            <ul class="custom-list mt-4 text-sm">
+                                <li>Autoestima y Autocuidado.</li>
+                                <li>Reconociendo y Poniendo Límites a la Violencia.</li>
+                                <li>Manejo de la Ansiedad y el Estrés.</li>
+                                <li>Sanando Heridas: Introducción al trauma.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 items-center my-16">
+                    <div class="md:col-span-1">
+                        <img src="images/angeles.jpeg" alt="Foto de la psicóloga Ángeles Cadima" class="rounded-full w-48 h-48 mx-auto shadow-xl border-4 border-white">
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="text-3xl font-bold text-accent mb-4">Conoce a Nuestra Psicóloga Aliada: Ángeles Cadima</h2>
+                        <p class="text-gray-700 leading-relaxed">El corazón de este programa es nuestra principal colaboradora, <strong>Maria de los Angeles Quispe Cadima</strong>. Ángeles no es solo una psicóloga; es una aliada incondicional de nuestra comunidad. Como Activista por los Derechos Humanos, Activista Feminista y defensora de comunidades vulnerables, ella entiende nuestra realidad desde una perspectiva de lucha, respeto y empatía. Su compromiso asegura que cada sesión y cada taller se den en un marco de total confianza y libre de prejuicios.</p>
+                    </div>
+                </div>
+        
+                <div class="highlight-box-mauve">
+                    <h2 class="text-2xl font-bold text-accent mb-2">Tu Seguridad es Nuestra Prioridad Absoluta</h2>
+                    <p class="text-lg">Sabemos que dar el paso de pedir ayuda requiere valentía. Queremos que sepas que protegemos tu confianza por encima de todo.</p>
+                    <ul class="custom-list mt-4">
+                        <li><strong>Confidencialidad Garantizada:</strong> No guardamos registros con datos personales. Tu historia te pertenece solo a ti y lo que se habla en sesión, se queda en sesión. Punto.</li>
+                        <li><strong>Un Espacio Íntimo y Privado:</strong> Actualmente, nuestras sesiones se realizan en un espacio privado. Si bien somos honestas en que aún estamos trabajando para adaptarlo y equiparlo por completo, te garantizamos un lugar donde tu seguridad física y emocional es lo primero.</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-accent text-white p-8 rounded-lg my-12 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-2">Nuestra Visión: Un Refugio Terapéutico para Todas</h2>
+                    <p class="mb-6">Creemos firmemente que el acceso a la salud mental es un derecho. Por eso, estamos luchando y buscando activamente financiamiento para dos grandes sueños:</p>
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <p>1. Ofrecer terapia <strong>100% gratuita</strong> para todas las compañeras que la necesiten.</p>
+                        <p>2. Acondicionar y mantener un <strong>espacio terapéutico permanente</strong>, cálido y completamente equipado para ustedes.</p>
+                    </div>
+                    <p class="mb-6">Si eres una persona o institución que quiere ayudarnos a construir este sueño, tu donación puede transformar vidas. Tu apoyo nos acerca a un futuro donde sanar sea una posibilidad para todas.</p>
+                    <a href="involucrate.html" class="inline-block button-accent font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg">
+                        Quiero Apoyar este Sueño
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

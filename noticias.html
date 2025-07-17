@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mantente al día con las últimas noticias, actividades y logros de Warmi A.M.T.S. en nuestra lucha por los derechos de las trabajadoras sexuales.">
+    <title>Noticias - Warmi Amts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main class="content-section">
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Noticias y Actividades</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Mantente al día con nuestro trabajo, campañas y logros más recientes.</p>
+                    <div class="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Noticia 1 -->
+                    <a href="articulo-1.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.32.13.jpeg" alt="Reunión con la Policía" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Warmi y la Policía Acuerdan Talleres de Sensibilización</h3>
+                            <p class="text-gray-600 mt-2 text-sm">En un paso clave hacia la construcción de puentes institucionales, se acordó un ciclo de talleres con la Dirección de DD.HH. de la Policía.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 2 -->
+                    <a href="articulo-2.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.18.27 (1).jpeg" alt="Reunión con la Defensoría del Pueblo" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Warmi Fortalece Alianza con la Defensoría del Pueblo</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Nos reunimos con el Defensor del Pueblo de Cochabamba para delinear nuevas vías de colaboración y protección de derechos.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 3 -->
+                    <a href="articulo-3.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.18.26 (1).jpeg" alt="Reunión con la FELCV" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Acuerdo con la FELCV para Proteger a Trabajadoras Sexuales</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Se trabajará en un convenio interinstitucional para crear rutas de atención más rápidas y seguras contra la violencia de género.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 4 -->
+                    <a href="articulo-4.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.32.13 (1).jpeg" alt="Warmi en la Marcha del Orgullo" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Warmi Dice Presente en la Marcha del Orgullo</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Participamos activamente en la marcha para celebrar la diversidad y exigir igualdad para todas las identidades.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 5 -->
+                    <a href="articulo-5.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.18.26.jpeg" alt="Taller sobre VPH" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Exitoso Taller sobre VPH en Colaboración con la UMSS</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Junto a la Carrera de Derecho y el Dr. Iván Rivera, realizamos un taller informativo sobre prevención y detección del VPH.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 6 -->
+                    <a href="articulo-6.html" class="program-card-v2">
+                        <img src="images/visita2025dentro.jpg" alt="Visita a compañeras en Quillacollo" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Realizamos Visitas de Acompañamiento en Quillacollo</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Nuestro equipo visitó 3 locales y conversó con 20 compañeras para escuchar sus necesidades y brindar apoyo directo.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 7 -->
+                    <a href="articulo-7.html" class="program-card-v2">
+                        <img src="images/noticia-4.jpeg" alt="Plantón por el Día del Trabajo Sexual" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Warmi Exige Derechos con un Plantón Pacífico</h3>
+                            <p class="text-gray-600 mt-2 text-sm">En el Día Internacional del Trabajo Sexual, visibilizamos la urgente necesidad de crear normativas que nos protejan.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                    <!-- Noticia 8 -->
+                    <a href="articulo-8.html" class="program-card-v2">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.18.24.jpeg" alt="Taller de salud mental" class="program-card-img">
+                        <div class="program-card-content">
+                            <h3 class="text-xl font-bold">Taller sobre ITS y Salud Mental con Presencia del SEDES</h3>
+                            <p class="text-gray-600 mt-2 text-sm">Junto a nuestra psicóloga aliada y el Director del Programa de VIH, abordamos el autocuidado físico y emocional.</p>
+                            <span class="program-card-btn mt-4">Leer más</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

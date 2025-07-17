@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Audiovisual - Warmi Amts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca ▾</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient">
+            <ul class="flex flex-col items-center space-y-4 py-4">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+        </div>
+   </header>
+
+    <main class="content-section">
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Material Audiovisual</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Explora nuestros recursos multimedia: talleres, entrevistas, podcasts y más.</p>
+                    <div class="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
+                </div>
+
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Videos Destacados</h3>
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+                    
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                        <div class="aspect-w-16 aspect-h-9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/CODIGO_DEL_VIDEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg w-full h-full"></iframe>
+                        </div>
+                        <h4 class="text-xl font-bold text-red-800">Taller Virtual: Empoderamiento</h4>
+                        <p class="text-gray-600 mt-1">Un resumen de nuestro último taller sobre fortalecimiento de capacidades y autoestima.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                        <div class="aspect-w-16 aspect-h-9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/OTRO_CODIGO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg w-full h-full"></iframe>
+                        </div>
+                        <h4 class="text-xl font-bold text-red-800">Entrevista a nuestra Directora</h4>
+                         <p class="text-gray-600 mt-1">Nuestra directora habla sobre los desafíos y logros de la organización en una entrevista reciente.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">Galería de Imágenes</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                    
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="images/fitti prensa.jpg" alt="Descripción de la imagen 1" class="h-auto w-full object-cover aspect-square">
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="images/marcha8m.jpg" alt="Descripción de la imagen 2" class="h-auto w-full object-cover aspect-square">
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="images/planton 2 de junio.jpg" alt="Descripción de la imagen 3" class="h-auto w-full object-cover aspect-square">
+                    </div>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                        <img src="images/WhatsApp Image 2025-07-15 at 21.18.24.jpeg" alt="Descripción de la imagen 4" class="h-auto w-full object-cover aspect-square">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p>
+            <p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p>
+            <div class="mt-8 border-t border-gray-700 text-center py-6">
+                <p class="text-gray-500 text-sm">&copy; 2025 Warmi Amts. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Lógica para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

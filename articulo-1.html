@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la pestaña del navegador -->
+    <title>Warmi y la Policía Acuerdan Talleres de Sensibilización - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <!-- Contenido del Artículo -->
+    <main class="content-section">
+        <article class="py-12 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                
+                <!-- Título principal de la página -->
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Warmi y la Dirección de DD.HH. de la Policía Acuerdan Talleres de Sensibilización</h1>
+
+                <!-- Autor y fecha -->
+                <p class="text-gray-500 mb-8">Publicado por Warmi Amts | 7 de julio de 2024</p>
+                
+                <!-- Imagen principal del artículo -->
+                <img src="images/noticia-1.jpg" alt="Reunión entre Warmi y la Dirección de Derechos Humanos de la Policía" class="w-full h-auto rounded-lg shadow-md mb-8">
+                
+                <!-- Contenido del artículo -->
+                <div class="prose lg:prose-xl max-w-none text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        En un importante paso hacia la construcción de puentes institucionales, la directiva de Warmi A.M.T.S. sostuvo una reunión clave con el Teniente Coronel DEAP Armando Azurduy Rodriguez, Director Departamental de Derechos Humanos de la Policía. El encuentro tuvo lugar en las oficinas de nuestra asociación, en un ambiente de diálogo y respeto mutuo.
+                    </p>
+                    <p class="mb-4">
+                        Durante la reunión, se abordaron diversos temas cruciales sobre la necesidad de proteger los derechos de las trabajadoras sexuales y de erradicar la violencia y la discriminación. Como resultado concreto, se acordó la planificación de un ciclo de <strong>talleres de sensibilización dirigidos al personal policial</strong>.
+                    </p>
+                     <p class="mb-4">
+                       Este acuerdo es fundamental para asegurar que los procedimientos y el trato de las fuerzas de seguridad se realicen con un enfoque de derechos humanos, reconociendo la dignidad y la labor de nuestras compañeras. Desde Warmi, celebramos este compromiso y seguiremos trabajando para que esta colaboración se traduzca en un cambio real y duradero.
+                    </p>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

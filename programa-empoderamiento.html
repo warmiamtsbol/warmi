@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre cómo nuestros Talleres de Empoderamiento te dan las herramientas para fortalecer tu voz, defender tus derechos y construir tu autonomía.">
+    <title>Talleres de Empoderamiento - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para esta página para hacerla más bonita -->
+    <style>
+        .program-hero {
+            background-image: linear-gradient(rgba(217, 42, 90, 0.8), rgba(0, 0, 0, 0.7)), url('images/placeholder-programa-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-list li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        .custom-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D92A5A'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-size: contain;
+        }
+        .highlight-box {
+            background-color: #fff1f2; /* Un rosa muy pálido */
+            border-left: 5px solid #D92A5A;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER UNIFICADO (Usa el mismo en todas las páginas) -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION DEL PROGRAMA -->
+        <section class="program-hero pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold">¿Y si te dijéramos que tu voz tiene el poder de cambiarlo todo?</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section bg-white">
+            <div class="max-w-4xl mx-auto px-6 py-12">
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                    <div>
+                        <p class="text-lg text-gray-700 leading-relaxed">Alguna vez has sentido que tienes mil cosas que decir, una injusticia que denunciar o una idea brillante que compartir, pero las palabras no salen como quisieras. Sientes que tu voz se hace pequeña, dudas, te preguntas si a alguien le importará.</p>
+                        <p class="text-lg text-gray-700 leading-relaxed mt-4">Conocemos esa sensación. Y fue precisamente por eso que nació uno de los proyectos más queridos de nuestra asociación: los <strong>Talleres de Empoderamiento</strong>. Nos dimos cuenta de que para luchar por nuestros derechos, primero teníamos que construir nuestra propia fuerza aquí dentro, juntas.</p>
+                    </div>
+                    <img src="images/fitti prensa.jpg" alt="Una mujer hablando con confianza en un grupo." class="rounded-lg shadow-xl">
+                </div>
+        
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center text-red-700 mb-6">Nuestros Talleres: Herramientas para Liderar</h2>
+                    <p class="text-center text-gray-600 mb-8">Estos no son cursos teóricos. Son encuentros prácticos y dinámicos diseñados para darte herramientas reales que puedes usar en tu día a día. Nos enfocamos en áreas clave:</p>
+                    <ul class="custom-list space-y-4">
+                        <li><strong>Liderazgo y Derechos Humanos:</strong> Gana la confianza para hablar en público, estructurar tus ideas y defender tus derechos con argumentos sólidos. Aprende a aplicar los derechos humanos y laborales que te protegen.</li>
+                        <li><strong>Empoderamiento Digital:</strong> Descubre cómo usar las redes sociales de forma segura y estratégica. Te enseñamos a proteger tu identidad y a usar las plataformas digitales como un megáfono para tus ideas y las de la comunidad.</li>
+                        <li><strong>Fortalecimiento Personal y Autonomía:</strong> A través de dinámicas grupales, trabajamos en la autoestima, el autocuidado y la toma de decisiones, explorando juntas herramientas para potenciar tu independencia.</li>
+                    </ul>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center my-12">
+                    <img src="images/taller angie 2.jpg" alt="Un grupo diverso de mujeres trabajando juntas en una mesa." class="rounded-lg shadow-xl md:order-2">
+                    <div class="md:order-1">
+                        <h2 class="text-3xl font-bold text-red-700 mb-4">Guiados por Expertas que Entienden tu Realidad</h2>
+                        <p class="text-gray-700 leading-relaxed">La calidad y la confianza son nuestras prioridades. Por eso, nuestros talleres son facilitados por:</p>
+                        <ul class="custom-list mt-4">
+                            <li><strong>Profesionales especialistas</strong> en comunicación, derechos humanos y psicología.</li>
+                            <li><strong>Compañeras expertas de la RedTraSex</strong> (Red de Trabajadoras Sexuales de Latinoamérica y el Caribe), de la cual orgullosamente formamos parte.</li>
+                        </ul>
+                        <p class="text-gray-700 leading-relaxed mt-4">Esta combinación asegura que cada taller tenga información de primer nivel y, lo más importante, una perspectiva cercana, relevante y libre de prejuicios.</p>
+                    </div>
+                </div>
+        
+                <div class="highlight-box">
+                    <p class="text-xl font-semibold">El resultado de este trabajo no es un diploma. El verdadero cambio lo vemos cuando una compañera, que antes no se atrevía a hablar, levanta la mano en una asamblea y da su opinión. Lo vemos en la confianza con la que caminan y en la fuerza de saber que no están solas.</p>
+                    <p class="text-xl font-bold text-center mt-4 text-red-800">Ese es el verdadero objetivo: una confianza que se siente en el cuerpo y una voz que ya no pide permiso para existir.</p>
+                </div>
+                
+                <div class="bg-red-700 text-white p-8 rounded-lg my-12 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-4">¿Cómo Puedes Participar?</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <h3 class="font-bold text-xl border-b-2 border-yellow-300 pb-2 mb-2">Modalidad</h3>
+                            <p>Todos nuestros talleres son <strong>presenciales</strong> para fomentar la conexión y crear un espacio seguro de confianza.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl border-b-2 border-yellow-300 pb-2 mb-2">Costo</h3>
+                            <p>Son <strong>totalmente gratuitos</strong> para las mujeres de nuestra comunidad.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl border-b-2 border-yellow-300 pb-2 mb-2">Próximas Fechas</h3>
+                            <p>Los talleres se programan durante todo el año. <strong>La mejor forma de saber cuándo será el próximo es seguirnos en nuestras redes sociales o escribirnos directamente.</strong></p>
+                        </div>
+                    </div>
+                    <p class="mt-8 font-bold text-xl">¡Tu voz es necesaria! Anímate a ser parte del cambio.</p>
+                    
+                    <!-- =================================================================== -->
+                    <!-- ============== AQUÍ ESTÁ EL NUEVO BOTÓN ========================= -->
+                    <!-- =================================================================== -->
+                    <div class="mt-8">
+                        <a href="https://wa.me/591XXXXXXXX?text=Hola,%20quiero%20ser%20parte%20del%20siguiente%20taller%20de%20empoderamiento" target="_blank" class="inline-block bg-white text-red-700 font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg">
+                            Quiero ser parte del siguiente taller, ¡Contáctanos!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

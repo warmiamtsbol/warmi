@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Involúcrate - Warmi Amts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- HEADER (Menú de Navegación) -->
+<header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+    <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+        <!-- LOGO Y TÍTULO DE LA ORGANIZACIÓN -->
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+            <div class="text-white">
+                <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+            </div>
+        </a>
+        
+        <ul class="hidden md:flex space-x-6 items-center">
+            <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+            <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+            <li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li>
+            <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+</header>
+    <!-- Contenido de la página de Involúcrate -->
+    <main class="content-section">
+        <section id="involucrate" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Unete a la lucha</h2><div class="w-24 h-1 bg-red-600 mx-auto mb-12"></div>
+                <div class="grid md:grid-cols-2 gap-12 text-left items-start">
+                    <div class="bg-white p-8 rounded-lg shadow-lg"><h3 class="text-2xl font-bold mb-3 text-red-700">Sé Voluntaria/o</h3><p class="text-gray-600 leading-relaxed mb-4">Creemos en el poder de la comunidad. Si compartes nuestra visión y quieres aportar con tu tiempo y habilidades (apoyo legal, psicológico, comunicación, etc.), nos encantaría saber de ti.</p><a href="mailto:contacto@warmiamts.org" class="text-red-600 hover:text-red-800 font-bold">Escríbenos un correo y cuéntanos cómo te gustaría colaborar &rarr;</a></div>
+                    <div id="donar" class="bg-white p-8 rounded-lg shadow-lg"><h3 class="text-2xl font-bold mb-3 text-red-700">Haz una Donación</h3><p class="text-gray-600 leading-relaxed mb-4">Cada contribución, grande o pequeña, nos ayuda a continuar con nuestros talleres, ofrecer apoyo y luchar por un cambio legislativo. Tu apoyo es vital.</p><button id="open-donate-modal" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">Donar Ahora</button></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2025 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+
+    <!-- MODAL DE DONACIÓN (Pop-up) -->
+    <div id="donate-modal" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4"><div class="bg-white rounded-lg shadow-2xl w-full max-w-lg mx-auto relative transform transition-all duration-300 scale-95"><button id="close-donate-modal" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-3xl">&times;</button><div class="p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-center mb-2 text-red-700">Tu apoyo transforma vidas</h2><p class="text-center text-gray-600 mb-6">Elige cómo te gustaría contribuir a nuestra causa.</p><div class="flex border-b mb-6"><button id="tab-extranjero" class="flex-1 py-2 font-semibold text-gray-800 border-b-2 border-red-600">Desde el Extranjero</button><button id="tab-bolivia" class="flex-1 py-2 font-semibold text-gray-500">Desde Bolivia</button></div><div id="content-extranjero"><p class="text-gray-600 mb-4">Puedes donar de forma segura a través de nuestras plataformas internacionales:</p><div class="space-y-3"><a href="#" class="block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700">Donar con PayPal</a><a href="#" class="block w-full text-center bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600">Donar con Payoneer</a></div><p class="text-center text-sm text-gray-500 mt-4">Otras opciones próximamente.</p></div><div id="content-bolivia" class="hidden"><div class="space-y-4"><div><h4 class="font-bold text-gray-700">Transferencia Bancaria</h4><p class="text-gray-600"><strong>Banco:</strong> [Nombre de tu Banco]</p><p class="text-gray-600"><strong>Nro. de Cuenta:</strong> [Tu número de cuenta]</p><p class="text-gray-600"><strong>A nombre de:</strong> [Titular de la cuenta]</p></div><div><h4 class="font-bold text-gray-700">Código QR (Simple)</h4><img src="images/codigo-qr.png" alt="[Código QR para donación]" class="mx-auto mt-2 rounded-md shadow-sm"></div><div><h4 class="font-bold text-gray-700">Contacto Directo</h4><p class="text-gray-600">Para Tigo Money o coordinar, escríbenos a:</p><a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="block w-full text-center bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600 mt-2">Contactar por WhatsApp</a></div></div></div><div class="mt-6 border-t pt-6"><label for="donation-message" class="block text-sm font-bold text-gray-700 mb-2">Déjanos un mensaje de apoyo (opcional)</label><textarea id="donation-message" rows="3" class="w-full p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"></textarea></div></div></div></div>
+    
+    <script>
+        // Lógica para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica para el Modal de Donación
+        const donateModal = document.getElementById('donate-modal');
+        const openModalButton = document.getElementById('open-donate-modal');
+        const closeModalButton = document.getElementById('close-donate-modal');
+
+        const openModal = () => donateModal.classList.remove('hidden');
+        const closeModal = () => donateModal.classList.add('hidden');
+
+        openModalButton.addEventListener('click', openModal);
+        closeModalButton.addEventListener('click', closeModal);
+        
+        donateModal.addEventListener('click', (e) => {
+            if (e.target === donateModal) { closeModal(); }
+        });
+        
+        // Lógica de Pestañas en el Modal
+        const tabExtranjero = document.getElementById('tab-extranjero');
+        const tabBolivia = document.getElementById('tab-bolivia');
+        const contentExtranjero = document.getElementById('content-extranjero');
+        const contentBolivia = document.getElementById('content-bolivia');
+
+        tabExtranjero.addEventListener('click', () => {
+            contentExtranjero.classList.remove('hidden');
+            contentBolivia.classList.add('hidden');
+            tabExtranjero.classList.add('border-red-600', 'text-gray-800');
+            tabExtranjero.classList.remove('text-gray-500');
+            tabBolivia.classList.remove('border-red-600', 'text-gray-800');
+            tabBolivia.classList.add('text-gray-500');
+        });
+
+        tabBolivia.addEventListener('click', () => {
+            contentBolivia.classList.remove('hidden');
+            contentExtranjero.classList.add('hidden');
+            tabBolivia.classList.add('border-red-600', 'text-gray-800');
+            tabBolivia.classList.remove('text-gray-500');
+            tabExtranjero.classList.remove('border-red-600', 'text-gray-800');
+            tabExtranjero.classList.add('text-gray-500');
+        });
+    </script>
+</body>
+</html>

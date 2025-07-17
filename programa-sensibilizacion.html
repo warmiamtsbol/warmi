@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ofrecemos talleres de sensibilización para policías, funcionarios, personal de salud y más, para derribar el estigma y garantizar derechos.">
+    <title>Talleres y Espacios de Sensibilización - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para esta página -->
+    <style>
+        /* Paleta de colores para la sección de sensibilización */
+        :root {
+            --edu-main: #475569; /* Gris azulado principal */
+            --edu-dark: #1e293b;  /* Gris azulado oscuro */
+            --edu-light: #f1f5f9; /* Gris muy claro */
+        }
+
+        .program-hero-sensibilizacion {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.8), rgba(0, 0, 0, 0.7)), url('images/placeholder-programa-7.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .target-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--edu-main);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .target-card svg {
+            width: 32px;
+            height: 32px;
+            color: var(--edu-main);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION DEL PROGRAMA -->
+        <section class="program-hero-sensibilizacion pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold">Educar para Respetar: Cambiando Mentes, Garantizando Derechos</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section bg-white">
+            <div class="max-w-4xl mx-auto px-6 py-12">
+
+                <div class="text-center mb-12">
+                     <p class="text-lg text-gray-700 leading-relaxed">El estigma y la discriminación nacen de la ignorancia. La violencia institucional y social a menudo se alimenta de prejuicios y mitos profundamente arraigados. En Warmi AMTS, sabemos que para lograr un cambio real y duradero, no basta con luchar por nuestros derechos; también debemos educar a quienes tienen el poder y la responsabilidad de respetarlos.</p>
+                     <p class="text-lg text-gray-700 leading-relaxed mt-4 font-semibold">Por eso, hemos diseñado un programa profesional de talleres y espacios de sensibilización. No venimos a pedir, venimos a enseñar. Ofrecemos nuestra experiencia y conocimiento para construir puentes de entendimiento y derribar los muros del prejuicio.</p>
+                </div>
+        
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--edu-dark);">Una Formación Necesaria para Sectores Clave</h2>
+                    <p class="text-center text-gray-600 mb-8">Ofrecemos espacios de formación a medida para todas aquellas instituciones y grupos cuyo trabajo se relaciona directa o indirectamente con nuestra comunidad. Nuestro objetivo es claro: mejorar el trato, garantizar los derechos y promover un entorno libre de discriminación.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="target-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg><p><strong>Fuerzas de Seguridad:</strong> Policía y guardia municipal.</p></div>
+                        <div class="target-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6m-6 3h6m-6 3h6m-6 3h6m-6 3h6" /></svg><p><strong>Funcionarios Públicos:</strong> Alcaldías y gobernaciones.</p></div>
+                        <div class="target-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><p><strong>Profesionales de la Salud:</strong> Médicos y personal de hospitales.</p></div>
+                        <div class="target-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path d="M12 18.375a9.75 9.75 0 006.335-2.463l-6.335-4.5-6.335 4.5a9.75 9.75 0 006.335 2.463z" /><path d="M12 3.375c3.46 0 6.335 2.082 6.335 4.5s-2.875 4.5-6.335 4.5S5.665 11.335 5.665 8.875 8.54 3.375 12 3.375z" /></svg><p><strong>Comunidad Universitaria:</strong> Estudiantes y docentes.</p></div>
+                        <div class="target-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><p><strong>Medios de Comunicación:</strong> Periodistas y editores.</p></div>
+                        <div class="target-card"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m-3-1l-3-1m3 1v-2.25" /></svg><p><strong>Actores del Entorno Laboral:</strong> Dueños y administradores.</p></div>
+                    </div>
+                </div>
+
+                <div class="my-16">
+                    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--edu-dark);">Contenidos Clave para Derribar el Estigma</h2>
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div class="space-y-4">
+                            <p class="text-lg text-gray-700">Nuestros talleres son espacios dinámicos y participativos donde abordamos temas cruciales con información veraz y desde la experiencia vivida:</p>
+                            <ul class="custom-list-health text-gray-800">
+                                <li><strong>Trabajo Sexual vs. Trata de Personas:</strong> Aclaramos la diferencia fundamental, un punto de partida esencial.</li>
+                                <li><strong>Derechos Humanos y Laborales:</strong> Explicamos el marco de derechos que protege a las trabajadoras sexuales.</li>
+                                <li><strong>El Impacto del Estigma:</strong> Analizamos cómo los prejuicios afectan la salud y seguridad de nuestra comunidad.</li>
+                                <li><strong>Lenguaje que No Discrimina:</strong> Ofrecemos herramientas para una comunicación respetuosa y precisa.</li>
+                                <li><strong>Protocolos de Actuación:</strong> Brindamos pautas sobre cómo ofrecer servicios de manera efectiva y libre de prejuicios.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="images/senzibilizacion polis.jpg" alt="Una persona impartiendo un taller profesional" class="rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--edu-dark);">Un Equipo de Formadoras Único</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">La potencia de nuestros talleres radica en nuestro equipo dual de facilitadoras, que combina la voz de la experiencia con el rigor profesional.</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2" style="color: var(--edu-main);">Compañeras Líderes</h3>
+                            <p>Muchas de nuestras formaciones son impartidas por las propias trabajadoras sexuales de nuestra asociación. Ellas son la prueba viviente del éxito de nuestros programas de empoderamiento y comparten su realidad con una autenticidad y una fuerza que nadie más puede igualar.</p>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2" style="color: var(--edu-main);">Profesionales Aliados</h3>
+                            <p>Contamos con un equipo de profesionales (psicólogos/as, abogados/as, sociólogos/as) comprometidos con los derechos humanos y que simpatizan profundamente con nuestra causa, aportando el rigor técnico y académico a cada taller.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-white p-8 rounded-lg my-12 text-center" style="background-color: var(--edu-dark);">
+                    <h2 class="text-3xl font-bold text-white mb-4">Solicita una Capacitación para tu Institución</h2>
+                    <p class="mb-6 text-lg">Invertir en sensibilización es invertir en una sociedad más justa y en un servicio más eficaz y humano. Estamos a disposición para organizar un taller a medida de las necesidades de tu equipo o institución.</p>
+                    <a href="mailto:contacto@warmiamts.org?subject=Solicitud de Taller de Sensibilización" class="inline-block bg-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95" style="color: var(--edu-dark);">
+                        Contactar para una Capacitación
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

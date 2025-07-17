@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infórmate sobre VIH/ITS y accede a material de prevención. Conoce nuestro programa de salud sexual sin estigmas ni tabúes.">
+    <title>Salud y Prevención (VIH/ITS) - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para esta página -->
+    <style>
+        /* Paleta de colores para la sección de salud */
+        :root {
+            --health-main: #0d9488; /* Verde azulado (teal) principal */
+            --health-dark: #115e59;  /* Verde azulado oscuro */
+            --health-light: #f0fdfa; /* Verde azulado muy claro */
+        }
+
+        .program-hero-salud {
+            background-image: linear-gradient(rgba(13, 148, 136, 0.8), rgba(0, 0, 0, 0.7)), url('images/placeholder-programa-3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .custom-list-health li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .custom-list-health li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            /* Icono actualizado con el nuevo color */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'%3E%3Cpath fill-rule='evenodd' d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            background-size: contain;
+        }
+
+        .highlight-box-health {
+            background-color: var(--health-light);
+            border-left: 5px solid var(--health-main);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION DEL PROGRAMA -->
+        <section class="program-hero-salud pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold">Saber es Poder: Hablemos de Salud Sexual sin Miedo</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section bg-white">
+            <div class="max-w-4xl mx-auto px-6 py-12">
+
+                <div class="text-center mb-12">
+                     <p class="text-lg text-gray-700 leading-relaxed">Frente al abandono de las autoridades y el muro de silencio que imponen el estigma y el tabú sobre la salud sexual, en Warmi AMTS hemos decidido tomar acción. Sabemos que la desinformación es un riesgo y que el miedo no protege. Por eso, este programa está dedicado a darte el poder del conocimiento y las herramientas para que tomes decisiones libres e informadas sobre tu propio cuerpo y tu bienestar.</p>
+                </div>
+        
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center" style="color: var(--health-dark);">Tu Salud, Tus Decisiones, Nuestro Apoyo</h2>
+                    <p class="text-center text-gray-600 mb-8">Ponemos a tu alcance recursos prácticos y educativos para que el cuidado de tu salud esté en tus manos.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-xl mb-2">Formación y Conocimiento Continuo</h3>
+                            <p>Realizamos talleres virtuales de forma continua sobre VIH e ITS, abiertos tanto para nuestras compañeras como para el público en general que quiera informarse sin prejuicios. Lo más importante: nos adaptamos a ti. Si un grupo de compañeras necesita un taller sobre un tema específico, lo organizamos. El conocimiento es una herramienta que construimos juntas.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-xl mb-2">Material de Prevención a tu Alcance</h3>
+                            <p>En nuestras visitas a los locales, en marchas y en cada taller, nos aseguramos de que tengas acceso gratuito y discreto a preservativos y a material informativo claro y sin rodeos. Creemos en la prevención activa y accesible para todas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 items-center my-16">
+                    <div class="md:col-span-1">
+                        <img src="images/dr ivan.jpeg" alt="Foto del Dr. Iván Rivera" class="rounded-full w-48 h-48 mx-auto shadow-xl border-4 border-white">
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="text-3xl font-bold mb-4" style="color: var(--health-dark);">Dr. Iván Rivera: Ciencia y Empatía a tu Servicio</h2>
+                        <p class="text-gray-700 leading-relaxed">Contar con el Dr. Iván Rivera como aliado es un pilar fundamental de nuestro trabajo en salud. Como médico especialista en enfermedades infectocontagiosas y con una amplia y reconocida experiencia, el Dr. Rivera no solo aporta su conocimiento científico, sino también una profunda empatía con nuestra causa.</p>
+                        <p class="text-gray-700 leading-relaxed mt-4">Gracias a su apoyo, podemos facilitar consultas especializadas con un coste mínimo y accesible, mientras trabajamos incansablemente para lograr la gratuidad total de este servicio vital.</p>
+                        <div class="mt-6">
+                             <button class="open-whatsapp-modal inline-block text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg" style="background-color: var(--health-dark);">
+                                Contactar un Servicio Médico
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="highlight-box-health">
+                    <h2 class="text-2xl font-bold mb-2" style="color: var(--health-dark);">Nuestra Red de Apoyo para tu Bienestar</h2>
+                    <p class="text-lg">Entendemos que el cuidado de la salud requiere de una red sólida. Por eso, hemos establecido un convenio clave con el <strong>Laboratorio Vida Sana</strong>. Además, estamos en constantes mesas de diálogo para ampliar nuestra red de alianzas con otras instituciones y profesionales comprometidos.</p>
+                </div>
+                
+                <div class="text-white p-8 rounded-lg my-12 text-center" style="background-color: var(--health-dark);">
+                    <h2 class="text-3xl font-bold text-white mb-2">Ayúdanos a Cuidarlas: Nuestra Meta Urgente</h2>
+                    <p class="mb-6">Para que nuestro trabajo sea sostenible y llegue a todas, necesitamos el apoyo de la comunidad. Hoy, nuestra búsqueda de financiamiento se centra en dos objetivos críticos:</p>
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h3 class="font-bold text-xl border-b-2 border-green-200 pb-2 mb-2">Acceso a Pruebas Gratuitas</h3>
+                            <p>Queremos crear un fondo que nos permita cubrir el 100% del costo de pruebas de VIH y otras ITS para cualquier compañera que lo necesite.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl border-b-2 border-green-200 pb-2 mb-2">Dotación de Insumos</h3>
+                            <p>Necesitamos asegurar un suministro constante de preservativos y lubricantes. Cada preservativo es un lazo de confianza que construimos.</p>
+                        </div>
+                    </div>
+                    <p class="mb-6 font-semibold">Tu donación, por pequeña que sea, se convierte directamente en salud, prevención y dignidad.</p>
+                    <a href="involucrate.html" class="inline-block bg-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95" style="color: var(--health-dark);">
+                        Quiero Donar para la Salud
+                    </a>
+                </div>
+
+                <div class="text-center border-t pt-8">
+                    <h3 class="text-2xl font-bold">¿Necesitas Orientación Médica? Contáctanos.</h3>
+                    <p class="text-gray-600 my-4">Si tienes dudas o quieres saber cómo acceder a una consulta con el Dr. Rivera o a los servicios de laboratorio, estamos aquí para ayudarte. Escríbenos a nuestro contacto directo. Te orientaremos de forma segura, privada y sin juicios.</p>
+                    <button class="open-whatsapp-modal inline-block text-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg" style="background-color: var(--health-dark);">
+                        Escribir por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

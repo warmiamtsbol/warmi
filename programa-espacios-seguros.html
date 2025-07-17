@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayúdanos a construir nuestra sede. Conoce el proyecto para crear un espacio seguro y profesional con consultorios y sala de talleres.">
+    <title>Creación de Espacios Seguros - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para esta página -->
+    <style>
+        /* Paleta de colores para la sección de Espacios Seguros */
+        :root {
+            --home-main: #f59e0b; /* Amarillo/Dorado principal */
+            --home-dark: #b45309;  /* Amarillo oscuro */
+            --home-light: #fffbeb; /* Amarillo muy claro */
+        }
+
+        .program-hero-hogar {
+            background-image: linear-gradient(rgba(180, 83, 9, 0.8), rgba(0, 0, 0, 0.7)), url('images/placeholder-programa-8.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .area-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .area-card svg {
+            width: 48px;
+            height: 48px;
+            color: var(--home-main);
+            margin: 0 auto 1rem;
+        }
+
+        .donation-item-list li {
+            padding-left: 20px;
+            position: relative;
+        }
+        .donation-item-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--home-dark);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION DEL PROGRAMA -->
+        <section class="program-hero-hogar pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold">Construyendo Nuestro Hogar: Un Espacio Digno y Seguro para Todas</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section bg-white">
+            <div class="max-w-4xl mx-auto px-6 py-12">
+
+                <div class="text-center mb-12">
+                     <p class="text-lg text-gray-700 leading-relaxed">Hasta hoy, el corazón de Warmi AMTS ha latido con una fuerza inmensa desde un lugar lleno de cariño, pero improvisado: la sala de nuestra presidenta. Cada programa, cada taller y cada abrazo de apoyo ha nacido del voluntarismo y de adaptar espacios personales. Estamos increíblemente orgullosas de todo lo que hemos logrado con tan poco.</p>
+                     <p class="text-lg text-gray-700 leading-relaxed mt-4 font-semibold">Pero ha llegado el momento de dar el siguiente paso. Para profesionalizar nuestros servicios y ofrecer la dignidad que cada compañera merece, necesitamos construir nuestro propio hogar. El programa "Creación y Adecuación de Espacios Seguros" es nuestro proyecto más ambicioso y necesario: transformar nuestro espacio actual en una sede funcional, segura y verdaderamente profesional.</p>
+                </div>
+        
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--home-dark);">Un Refugio Profesional con Tres Áreas Clave</h2>
+                    <p class="text-center text-gray-600 mb-8">Este proyecto no es solo una remodelación; es la creación de un centro integral de apoyo. Buscamos financiamiento para adecuar y equipar tres áreas fundamentales en nuestra sede:</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="area-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1.5-1.5m1.5 1.5l1.5-1.5m0 0l1.5 1.5m-1.5-1.5l-1.5 1.5" /></svg>
+                            <h3 class="font-bold text-xl mb-2">Sala de Talleres y Capacitación</h3>
+                            <p>Un espacio multifuncional y bien equipado para impartir nuestros talleres de empoderamiento y sensibilización de forma presencial.</p>
+                        </div>
+                        <div class="area-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.75 0h.008v.015H9v-.015zm5.25 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.75 0h.008v.015h-.008v-.015z" /></svg>
+                            <h3 class="font-bold text-xl mb-2">Consultorio Psicológico Confidencial</h3>
+                            <p>Un consultorio que garantice la privacidad y el confort para las sesiones de terapia, extendiendo el apoyo a las familias.</p>
+                        </div>
+                        <div class="area-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h3 class="font-bold text-xl mb-2">Consultorio Médico Primario</h3>
+                            <p>Un espacio para que nuestros médicos aliados ofrezcan consultas gratuitas y de primer nivel, asegurando un acceso a la salud sin estigmas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-white p-8 rounded-lg my-12" style="background-color: var(--home-dark);">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-4">Ayúdanos a Poner los Ladrillos de este Sueño</h2>
+                            <p class="mb-6">Para hacer realidad este centro de bienestar y seguridad, necesitamos tu apoyo. Cada donación, sin importar el tamaño, se destinará directamente a:</p>
+                            <ul class="donation-item-list space-y-2 mb-6">
+                                <li>Remodelación y adecuación de los espacios.</li>
+                                <li>Mobiliario para consultorios y sala de talleres.</li>
+                                <li>Equipamiento tecnológico (proyector, computadora).</li>
+                                <li>Material médico y psicológico básico.</li>
+                            </ul>
+                        </div>
+                        <div class="text-center">
+                             <p class="text-xl italic mb-4">"Construir este espacio es construir dignidad. Es dar un mensaje claro: Nos importas, mereces lo mejor y este es tu lugar seguro."</p>
+                            <a href="involucrate.html" class="inline-block bg-yellow-400 font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95" style="color: var(--home-dark);">
+                                Dona para Construir Nuestro Hogar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

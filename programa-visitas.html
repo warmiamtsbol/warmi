@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nuestra red de apoyo comunitario ofrece mediación, visitas a locales y guía para nuevas compañeras. Nunca más estarás sola.">
+    <title>Acompañamiento Comunitario - Warmi Amts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para esta página -->
+    <style>
+        /* Paleta de colores para la sección de comunidad */
+        :root {
+            --community-main: #f97316; /* Naranja principal */
+            --community-dark: #b45309;  /* Naranja oscuro */
+            --community-light: #fff7ed; /* Naranja muy claro */
+        }
+
+        .program-hero-comunidad {
+            background-image: linear-gradient(rgba(180, 83, 9, 0.8), rgba(0, 0, 0, 0.7)), url('images/placeholder-programa-5.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .action-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--community-main);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box-community {
+            background-color: var(--community-light);
+            border-left: 5px solid var(--community-main);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION DEL PROGRAMA -->
+        <section class="program-hero-comunidad pt-32 pb-20 text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold">Nunca Más Sola: Nuestra Red de Apoyo Comunitario</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="content-section bg-white">
+            <div class="max-w-4xl mx-auto px-6 py-12">
+
+                <div class="text-center mb-12">
+                     <p class="text-lg text-gray-700 leading-relaxed">La lucha por los grandes cambios se gana en las leyes y en las calles, pero la batalla del día a día se vive en el trabajo, en casa, en la soledad de un problema que parece no tener solución. ¿Qué haces cuando tienes un problema con el dueño del local? ¿A quién llamas si un cliente se sobrepasa? ¿Qué pasa si simplemente te sientes sola y necesitas hablar con alguien que de verdad entienda por lo que estás pasando?</p>
+                     <p class="text-lg text-gray-700 leading-relaxed mt-4 font-semibold">Para todas esas preguntas, la respuesta es la misma: la comunidad. Nuestro programa de Acompañamiento Comunitario es precisamente eso, una red de apoyo real y tangible, la promesa de que, sin importar lo que pase, no tienes que enfrentarlo sola.</p>
+                </div>
+        
+                <div class="bg-gray-50 p-8 rounded-lg my-12">
+                    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--community-dark);">Un Apoyo Real para Problemas Reales</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="action-card">
+                            <h3 class="font-bold text-xl mb-2">Mediación y Respaldo</h3>
+                            <p>Si tienes un problema con el dueño de un local o con un cliente, te acompañamos para mediar y asegurarnos de que tus derechos se respeten.</p>
+                        </div>
+                        <div class="action-card">
+                            <h3 class="font-bold text-xl mb-2">Guía para Nuevas Compañeras</h3>
+                            <p>Ayudamos a las mujeres nuevas en el trabajo o en la ciudad, dándoles la información que necesitan para moverse con seguridad.</p>
+                        </div>
+                        <div class="action-card">
+                            <h3 class="font-bold text-xl mb-2">Apoyo en Emergencias</h3>
+                            <p>Te orientamos y acompañamos si tienes que hacer un trámite complicado o si enfrentas una emergencia médica o familiar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =================================================================== -->
+                <!-- ============== SECCIÓN DE ÉNFASIS: VISITAS A LOCALES ============ -->
+                <!-- =================================================================== -->
+                <div class="my-16 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4" style="color: var(--community-dark);">Visitas a Locales: El Corazón de Nuestro Apoyo</h2>
+                        <p class="text-gray-700 leading-relaxed">No esperamos a que surja un problema. Nuestro equipo visita los lugares de trabajo de forma continua y proactiva. Estas visitas son la base de la confianza que construimos. En ellas, no solo socializamos información sobre derechos o entregamos material de prevención; lo más importante es que **escuchamos**.</p>
+                        <p class="text-gray-700 leading-relaxed mt-4">Queremos saber de primera mano los atropellos, las dificultades y las necesidades de cada compañera. Esta cercanía nos permite actuar a tiempo, prevenir abusos y asegurar que cada mujer sepa que tiene una organización que la respalda incondicionalmente.</p>
+                    </div>
+                    <div>
+                        <img src="images/visita2025.jpg" alt="Imagen de una visita de Warmi a un local de trabajo" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+
+
+                <div class="my-16">
+                    <h2 class="text-3xl font-bold text-center mb-8" style="color: var(--community-dark);">Un Equipo que Combina Experiencia y Conocimiento</h2>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="future-goal p-6">
+                            <h3 class="font-bold text-xl mb-2" style="color: var(--community-main);">Compañeras Pares</h3>
+                            <p>El núcleo de nuestra red. Son mujeres con experiencia, formación y la vivencia necesaria para entender tu situación sin filtros.</p>
+                        </div>
+                        <div class="future-goal p-6">
+                            <h3 class="font-bold text-xl mb-2" style="color: var(--community-main);">Voluntarias Universitarias</h3>
+                            <p>Estudiantes de último año de Trabajo Social y otras carreras afines que, bajo nuestra supervisión, aportan su energía y conocimientos frescos.</p>
+                            <div class="mt-4">
+                                <a href="involucrate.html" class="inline-block text-white font-bold py-2 px-5 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105" style="background-color: var(--community-main);">
+                                    Quiero ser Voluntaria/o
+                                </a>
+                            </div>
+                        </div>
+                        <div class="future-goal p-6">
+                            <h3 class="font-bold text-xl mb-2" style="color: var(--community-main);">Personal Especializado</h3>
+                            <p>Para casos que requieren una intervención específica (legal, psicológica, etc.), contamos con el respaldo de las y los profesionales de nuestros otros programas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box-community">
+                    <h2 class="text-2xl font-bold mb-2" style="color: var(--community-dark);">Entre Pares: Sin Juicios, Solo Apoyo</h2>
+                    <p class="text-lg">Esto es lo que hace a nuestro acompañamiento tan especial y diferente. No es una charla desde un escritorio o una terapia formal. Es una conversación entre iguales, un espacio donde compartimos experiencias sin juzgar y sin ser juzgadas. Se basa en la confianza de saber que la persona que tienes al lado ha caminado por un sendero similar al tuyo.</p>
+                    <p class="text-lg mt-4 font-semibold">Estamos en una defensa permanente de las trabajadoras sexuales, y esa defensa empieza por cuidarnos entre nosotras, por crear lazos de sororidad que nadie pueda romper.</p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
