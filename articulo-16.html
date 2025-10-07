@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la pestaña del navegador -->
+    <title>WARMI desarrolla grupo focal sobre maternidad, embarazo y aborto - Warmi Amts</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <style>
+        /* Estilos para las fuentes personalizadas */
+        body {
+            font-family: 'Lato', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #f7fafc; /* Gris claro de fondo */
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Estilo del encabezado con gradiente y efecto al hacer scroll */
+        .header-gradient {
+            background: linear-gradient(90deg, #6d28d9 0%, #9f12b3 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-scrolled {
+            background: linear-gradient(90deg, #5b21b6 0%, #86198f 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Espaciado para el contenido principal para que no quede oculto por el header fijo */
+        .content-section {
+            padding-top: 120px;
+        }
+
+        /* Menú desplegable para escritorio */
+        .dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 240px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+            z-index: 1;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            margin-top: 0.5rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #4a5568;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f7fafc;
+            color: #6d28d9;
+        }
+
+        /* Estilos personalizados para el contenido del artículo */
+        .prose strong {
+            color: #6d28d9;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- HEADER UNIFICADO -->
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <!-- Logo SVG de ejemplo -->
+                <svg class="h-16 w-auto flex-shrink-0" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="white">
+                    <path d="M50 0 C22.38 0 0 22.38 0 50 C0 77.62 22.38 100 50 100 C77.62 100 100 77.62 100 50 C100 22.38 77.62 0 50 0 Z M50 10 C61.05 10 70 18.95 70 30 C70 41.05 61.05 50 50 50 C38.95 50 30 41.05 30 30 C30 18.95 38.95 10 50 10 Z M50 55 C69.33 55 85 66.72 85 80 L85 90 L15 90 L15 80 C15 66.72 30.67 55 50 55 Z"/>
+                </svg>
+                <div class="text-white">
+                    <span class="font-heading font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight font-light">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex space-x-8 items-center">
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold transition-colors duration-200">Sobre Nosotras</a></li>
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold transition-colors duration-200">Programas</a></li>
+                <li class="dropdown relative">
+                    <a href="#" class="dropbtn text-white hover:text-yellow-300 font-semibold inline-flex items-center transition-colors duration-200">
+                        Biblioteca <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Investigaciones Académicas</a>
+                        <a href="#">Noticias</a>
+                        <a href="#">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold transition-colors duration-200">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Menú para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/10 backdrop-blur-sm">
+            <ul class="flex flex-col items-center space-y-4 py-4">
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold">Sobre Nosotras</a></li>
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold">Programas</a></li>
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold">Biblioteca</a></li>
+                <li><a href="#" class="text-white hover:text-yellow-300 font-semibold">Involúcrate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Contenido del Artículo -->
+    <main class="content-section">
+        <article class="py-12 md:py-20">
+            <div class="container mx-auto px-6 max-w-4xl bg-white p-6 sm:p-8 md:p-12 rounded-lg shadow-lg">
+                
+                <!-- Título principal de la página -->
+                <h1 class="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 leading-tight">WARMI desarrolla grupo focal sobre maternidad, embarazo y aborto para fortalecer políticas de cuidado y acceso a derechos</h1>
+
+                <!-- Autor y fecha -->
+                <p class="text-gray-500 mb-8">Publicado por Warmi Amts | 23 de septiembre de 2025</p>
+                
+                <!-- Imagen principal del artículo -->
+                <img src="https://placehold.co/1200x600/9f12b3/ffffff?text=Derechos+Reproductivos&font=lato" alt="Grupo focal sobre maternidad y derechos reproductivos" class="w-full h-auto rounded-lg shadow-md mb-8">
+                
+                <!-- Contenido del artículo con estilos de tipografía de Tailwind -->
+                <div class="prose lg:prose-xl max-w-none text-gray-700 leading-relaxed space-y-6">
+                    <p>
+                        En el marco de nuestras acciones de investigación y sensibilización, WARMI A.M.T.S. llevó a cabo un grupo focal sobre maternidad, embarazo y aborto, con la participación de compañeras trabajadoras sexuales y aliadas. La sesión tuvo por objetivo recoger experiencias, percepciones y necesidades para orientar futuras acciones de acompañamiento, formación y articulación institucional.
+                    </p>
+                    <p>
+                        La actividad se desarrolló bajo consentimiento informado, resguardo de la confidencialidad y enfoque de derechos humanos. Se trabajó con una pauta metodológica que incluyó: presentación de objetivos, reglas de cuidado, preguntas disparadoras y relatoría sistemática. Entre los temas emergentes, las participantes señalaron barreras de acceso a información confiable y atención sin estigma, experiencias de violencia obstétrica, dificultades en la derivación oportuna, y la necesidad de acompañamiento psicosocial, legal y sanitario en procesos de embarazo y decisiones reproductivas.
+                    </p>
+                    <p>
+                        El espacio permitió identificar buenas prácticas (atención con lenguaje claro, respeto a la autonomía, servicios amigables) y prioridades para la agenda comunitaria: difusión de rutas de atención, capacitaciones a personal de salud y justicia, y fortalecimiento de redes de apoyo entre compañeras. La información recolectada alimentará un informe interno y servirá de base para diseñar talleres específicos, materiales de prevención y acciones de incidencia ante instituciones competentes.
+                    </p>
+                     <p>
+                        Desde WARMI agradecemos la confianza de quienes participaron y reafirmamos nuestro compromiso con la salud integral, la autonomía reproductiva y la erradicación del estigma. Continuaremos generando datos y alianzas para que cada decisión se tome con información, acompañamiento y respeto.
+                    </p>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p>
+            <p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-purple-400 transition-colors duration-200">contacto@warmiamts.org</a></p>
+            <div class="mt-8 border-t border-gray-700 text-center py-6">
+                <p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript para interactividad -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const header = document.getElementById('header');
+
+            // Alternar visibilidad del menú móvil
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            });
+
+            // Efecto de scroll en el encabezado
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+
+            // Cerrar menú móvil al hacer clic en un enlace (para una mejor experiencia de usuario)
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
