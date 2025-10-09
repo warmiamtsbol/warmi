@@ -135,35 +135,8 @@
             
         }
     }
-// --- Código para el botón "Conócenos" en móvil ---
 
-// Espera a que toda la página se cargue
-document.addEventListener('DOMContentLoaded', function() {
 
-    // Seleccionamos los elementos que necesitamos
-    const conoceNosButton = document.getElementById('conocenos-hero-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    // Nos aseguramos de que ambos elementos existan antes de continuar
-    if (conoceNosButton && mobileMenu) {
-
-        // Añadimos un detector de clics al botón "Conócenos"
-        conoceNosButton.addEventListener('click', function(event) {
-
-            // Verificamos si la pantalla es de tamaño móvil (menos de 768px, que es el punto de quiebre 'md' de Tailwind)
-            if (window.innerWidth < 768) {
-
-                // 1. Prevenimos que el enlace vaya a "sobre.html"
-                event.preventDefault(); 
-
-                // 2. Mostramos u ocultamos el menú de hamburguesa
-                mobileMenu.classList.toggle('hidden');
-            }
-
-            // Si la pantalla es más grande, el enlace funcionará normalmente.
-        });
-    }
-});
 
 
 
