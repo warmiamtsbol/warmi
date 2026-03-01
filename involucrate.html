@@ -1,106 +1,415 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Súmate a Warmi A.M.T.S. como voluntaria/o o realiza una donación. Tu apoyo transforma vidas y fortalece los derechos de las trabajadoras sexuales.">
     <title>Involúcrate - Warmi Amts</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <!-- HEADER (Menú de Navegación) -->
-<header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
-    <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
-        <!-- LOGO Y TÍTULO DE LA ORGANIZACIÓN -->
-        <a href="index.html" class="flex items-center gap-3">
-            <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
-            <div class="text-white">
-                <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
-                <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
-            </div>
-        </a>
+    
+    <style>
+        /* Variables de colores de los programas de WARMI */
+        :root {
+            --warmi-red: #DA291C;
+            --warmi-yellow: #FFC72C;
+            --warmi-green: #007A33;
+            --health-main: #0d9488; 
+            --mauve-main: #B794B7;
+            --empower-main: #D92A5A;
+        }
+
+        /* Estilos orgánicos y de identidad */
+        body { background-color: #FEFBF6; } /* Fondo cálido institucional */
         
-        <ul class="hidden md:flex space-x-6 items-center">
-            <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
-            <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
-            <li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li>
-            <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li>
-        </ul>
-        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
-</header>
-    <!-- Contenido de la página de Involúcrate -->
-    <main class="content-section">
-        <section id="involucrate" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Unete a la lucha</h2><div class="w-24 h-1 bg-red-600 mx-auto mb-12"></div>
-                <div class="grid md:grid-cols-2 gap-12 text-left items-start">
-                    <div class="bg-white p-8 rounded-lg shadow-lg"><h3 class="text-2xl font-bold mb-3 text-red-700">Sé Voluntaria/o</h3><p class="text-gray-600 leading-relaxed mb-4">Creemos en el poder de la comunidad. Si compartes nuestra visión y quieres aportar con tu tiempo y habilidades (apoyo legal, psicológico, comunicación, etc.), nos encantaría saber de ti.</p><a href="mailto:contacto@warmiamts.org" class="text-red-600 hover:text-red-800 font-bold">Escríbenos un correo y cuéntanos cómo te gustaría colaborar &rarr;</a></div>
-                    <div id="donar" class="bg-white p-8 rounded-lg shadow-lg"><h3 class="text-2xl font-bold mb-3 text-red-700">Haz una Donación</h3><p class="text-gray-600 leading-relaxed mb-4">Cada contribución, grande o pequeña, nos ayuda a continuar con nuestros talleres, ofrecer apoyo y luchar por un cambio legislativo. Tu apoyo es vital.</p><button id="open-donate-modal" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">Donar Ahora</button></div>
+        .warmi-border-top {
+            border-top: 5px solid transparent;
+            border-image: linear-gradient(to right, var(--warmi-red), var(--warmi-yellow), var(--warmi-green)) 1;
+        }
+
+        .card-impacto {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-impacto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Botón Institucional Warmi */
+        .btn-warmi-primary {
+            background-color: var(--warmi-red);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(218, 41, 28, 0.39);
+            transition: all 0.3s ease;
+        }
+        .btn-warmi-primary:hover {
+            background-color: #b91c1c;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    
+    <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300 shadow-md">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo.png" alt="Logo de Warmi Amts" class="h-16 w-auto flex-shrink-0">
+                <div class="text-white">
+                    <span class="font-bold text-lg md:text-xl tracking-wide">WARMI A.M.T.S.</span>
+                    <span class="text-xs md:text-sm block leading-tight">Asociación de Mujeres Trabajadoras Sexuales</span>
+                </div>
+            </a>
+            
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li>
+                <li class="dropdown">
+                    <a href="biblioteca.html" class="dropbtn text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="investigaciones.html">Investigaciones Académicas</a>
+                        <a href="noticias.html">Noticias</a>
+                        <a href="material-audiovisual.html">Material Audiovisual</a>
+                    </div>
+                </li>
+                <li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link border-b-2 border-yellow-200 pb-1">Involúcrate</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden header-gradient transition-all duration-300 ease-in-out">
+            <ul class="flex flex-col items-center space-y-4 py-6">
+                <li><a href="sobre.html" class="text-white text-lg font-semibold hover:text-yellow-200">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white text-lg font-semibold hover:text-yellow-200">Programas</a></li>
+                <li class="w-full text-center">
+                    <details class="group">
+                        <summary class="list-none text-white text-lg font-semibold cursor-pointer hover:text-yellow-200 flex justify-center items-center gap-2">
+                            Biblioteca <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <ul class="mt-2 space-y-2 bg-black/10 py-2 rounded-lg mx-4">
+                            <li><a href="investigaciones.html" class="block text-white/90 text-sm hover:text-white">Investigaciones</a></li>
+                            <li><a href="noticias.html" class="block text-white/90 text-sm hover:text-white">Noticias</a></li>
+                            <li><a href="material-audiovisual.html" class="block text-white/90 text-sm hover:text-white">Multimedia</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="involucrate.html" class="text-white text-lg font-semibold hover:text-yellow-200">Involúcrate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content-section pt-32 pb-16">
+        
+        <section class="container mx-auto px-6 max-w-4xl text-center mb-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-red-100 text-red-800 font-bold text-sm tracking-wider uppercase mb-4">Súmate a WARMI</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">El desafío no es ser perfecta, es ser capaz.</h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">Nuestra fuerza nace de la comunidad. Tu apoyo no es un acto de caridad, es un lazo de <strong>sororidad y justicia social</strong> que nos permite exigir derechos, salud integral y una vida libre de violencia para todas las compañeras trabajadoras sexuales.</p>
+        </section>
+
+        <section class="container mx-auto px-6 max-w-5xl mb-20">
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 warmi-border-top">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center">Transparencia en nuestro actuar</h3>
+                <p class="text-center text-gray-500 mb-8">¿A dónde se destinan los fondos de nuestra Red de Aliadas?</p>
+                
+                <div class="space-y-6 max-w-3xl mx-auto">
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-1">
+                            <span style="color: var(--health-main);">Fondo de Salud y Prevención (Kits, Pruebas ITS/VIH)</span>
+                            <span style="color: var(--health-main);">40%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-4">
+                            <div class="h-4 rounded-full" style="width: 40%; background-color: var(--health-main);"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-1">
+                            <span style="color: var(--mauve-main);">Apoyo Psicológico y Contención</span>
+                            <span style="color: var(--mauve-main);">30%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-4">
+                            <div class="h-4 rounded-full" style="width: 30%; background-color: var(--mauve-main);"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-bold mb-1">
+                            <span style="color: var(--empower-main);">Talleres de Empoderamiento y Liderazgo</span>
+                            <span style="color: var(--empower-main);">20%</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-4">
+                            <div class="h-4 rounded-full" style="width: 20%; background-color: var(--empower-main);"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="container mx-auto px-6 max-w-6xl mb-20">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800">Elige tu Impacto</h2>
+                <p class="text-gray-600 mt-2">Convierte tu aporte en acciones reales que transforman vidas hoy mismo.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="card-impacto bg-white rounded-3xl overflow-hidden flex flex-col h-full border border-gray-100">
+                    <div class="p-8 text-center" style="background-color: rgba(13, 148, 136, 0.1);">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                            <svg class="w-8 h-8" style="color: var(--health-main);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-4xl font-extrabold text-gray-800">Bs. 50</h3>
+                        <p class="font-bold uppercase tracking-wider text-sm mt-2" style="color: var(--health-main);">Kit de Salud</p>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <p class="text-gray-600 text-center mb-6">Financia un kit completo de prevención (preservativos, lubricantes y reactivos para pruebas rápidas) entregado directamente a las compañeras en su lugar de trabajo.</p>
+                        <button class="open-donate-modal w-full font-bold py-3 rounded-xl transition-colors border-2" style="border-color: var(--health-main); color: var(--health-main);" data-amount="Bs. 50" data-impact="financiar un Kit de Salud Preventiva">
+                            Impactar en Salud
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-impacto bg-white rounded-3xl overflow-hidden flex flex-col h-full shadow-xl relative scale-105 z-10 border-2" style="border-color: var(--warmi-red);">
+                    <div class="absolute top-0 inset-x-0 h-1" style="background: linear-gradient(to right, var(--warmi-red), var(--warmi-yellow));"></div>
+                    <div class="p-8 text-center" style="background-color: var(--warmi-red);">
+                        <span class="bg-white text-red-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block shadow-sm">Mayor Necesidad</span>
+                        <h3 class="text-5xl font-extrabold text-white">Bs. 150</h3>
+                        <p class="font-bold uppercase tracking-wider text-sm mt-2 text-red-100">Sesión de Terapia</p>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <p class="text-gray-700 text-center mb-6 font-medium">Cubre los honorarios para una sesión individualizada con nuestra psicóloga, creando un refugio seguro para una compañera que atraviesa una situación de violencia.</p>
+                        <button class="open-donate-modal btn-warmi-primary w-full font-bold py-4 rounded-xl text-lg" data-amount="Bs. 150" data-impact="cubrir una Sesión de Terapia Psicológica">
+                            Donar y Sanar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-impacto bg-white rounded-3xl overflow-hidden flex flex-col h-full border border-gray-100">
+                    <div class="p-8 text-center" style="background-color: rgba(217, 42, 90, 0.1);">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                            <svg class="w-8 h-8" style="color: var(--empower-main);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+                        </div>
+                        <h3 class="text-4xl font-extrabold text-gray-800">Bs. 350</h3>
+                        <p class="font-bold uppercase tracking-wider text-sm mt-2" style="color: var(--empower-main);">Taller de Liderazgo</p>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <p class="text-gray-600 text-center mb-6">Subvenciona materiales y logística para un taller de oratoria y derechos, empoderando a nuevas lideresas para defender nuestra voz institucional.</p>
+                        <button class="open-donate-modal w-full font-bold py-3 rounded-xl transition-colors border-2" style="border-color: var(--empower-main); color: var(--empower-main);" data-amount="Bs. 350" data-impact="subvencionar un Taller de Liderazgo">
+                            Impulsar Voces
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button class="open-donate-modal text-gray-500 font-semibold hover:text-red-600 transition-colors" data-amount="Aporte Libre" data-impact="apoyar el Fondo General de WARMI">
+                    Prefiero hacer un aporte de otro monto
+                </button>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-3xl p-10 shadow-sm border border-gray-100 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 opacity-5">
+                        <svg class="w-64 h-64 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Suma tu talento</h3>
+                        <p class="text-gray-600 mb-6">Si tienes conocimientos en derecho, psicología, trabajo social, diseño o simplemente quieres apoyar con tu tiempo, WARMI es tu casa. Juntas somos invencibles.</p>
+                        <a href="mailto:bolivia@redtrasex.org?subject=Quiero ser Voluntaria/o en Warmi" class="inline-flex items-center gap-2 text-gray-800 font-bold hover:text-red-600 transition-colors underline decoration-2 underline-offset-4">
+                            Escríbenos para ser voluntaria/o &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 text-white rounded-3xl p-10 shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-yellow-400 to-red-600"></div>
+                    <h3 class="text-2xl font-bold mb-3">Empresas e Instituciones (RSE)</h3>
+                    <p class="text-gray-400 text-sm mb-6">WARMI A.M.T.S. es una entidad civil legalmente constituida. Su empresa puede apoyar nuestra labor mediante donaciones económicas o en especie (equipos, insumos).</p>
+                    
+                    <ul class="space-y-3 mb-8 text-sm text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Deducción del Impuesto a las Utilidades (IUE).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Reintegro de Crédito Fiscal IVA por activos fijos.</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="mailto:bolivia@redtrasex.org?subject=Alianza Corporativa RSE - Warmi" class="inline-block bg-white text-gray-900 font-bold py-3 px-6 rounded-xl hover:bg-gray-200 transition-colors text-sm">
+                        Solicitar Dossier Institucional y NIT
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2025 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    <footer id="contacto" class="bg-gray-900 text-white py-12 border-t-4 border-red-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p>
+            <p class="text-gray-400"><strong>Email:</strong> <a href="mailto:bolivia@redtrasex.org" class="hover:text-red-400 transition-colors">bolivia@redtrasex.org</a></p>
+            <div class="mt-8 border-t border-gray-800 text-center py-6">
+                <p class="text-gray-500 text-sm">&copy; 2024 Warmi A.M.T.S. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <!-- MODAL DE DONACIÓN (Pop-up) -->
-    <div id="donate-modal" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4"><div class="bg-white rounded-lg shadow-2xl w-full max-w-lg mx-auto relative transform transition-all duration-300 scale-95"><button id="close-donate-modal" class="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-3xl">&times;</button><div class="p-6 md:p-8"><h2 class="text-2xl md:text-3xl font-bold text-center mb-2 text-red-700">Tu apoyo transforma vidas</h2><p class="text-center text-gray-600 mb-6">Elige cómo te gustaría contribuir a nuestra causa.</p><div class="flex border-b mb-6"><button id="tab-extranjero" class="flex-1 py-2 font-semibold text-gray-800 border-b-2 border-red-600">Desde el Extranjero</button><button id="tab-bolivia" class="flex-1 py-2 font-semibold text-gray-500">Desde Bolivia</button></div><div id="content-extranjero"><p class="text-gray-600 mb-4">Puedes donar de forma segura a través de nuestras plataformas internacionales:</p><div class="space-y-3"><a href="#" class="block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700">Donar con PayPal</a><a href="#" class="block w-full text-center bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600">Donar con Payoneer</a></div><p class="text-center text-sm text-gray-500 mt-4">Otras opciones próximamente.</p></div><div id="content-bolivia" class="hidden"><div class="space-y-4"><div><h4 class="font-bold text-gray-700">Transferencia Bancaria</h4><p class="text-gray-600"><strong>Banco:</strong>Banco Ganadero</p><p class="text-gray-600"><strong>Nro. de Cuenta:</strong>1311754864</p><p class="text-gray-600"><strong>A nombre de:</strong>Asocion de mujeres Trabajadoras sexuales Warmi</p></div><div><h4 class="font-bold text-gray-700">Código QR (Simple)</h4><img src="qrwarmi.jpg" alt="qr wami" class="mx-auto mt-2 rounded-md shadow-sm"></div><div><h4 class="font-bold text-gray-700">Contacto Directo</h4><p class="text-gray-600">Para Tigo Money o coordinar, escríbenos a:</p><a href="https://wa.me/+591 75567752" target="_blank" class="block w-full text-center bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600 mt-2">Contactar por WhatsApp</a></div></div></div><div class="mt-6 border-t pt-6"><label for="donation-message" class="block text-sm font-bold text-gray-700 mb-2">Déjanos un mensaje de apoyo (opcional)</label><textarea id="donation-message" rows="3" class="w-full p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"></textarea></div></div></div></div>
+    <div id="donate-modal" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="donate-modal-title">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-3xl mx-auto relative transform transition-all duration-300 scale-95 overflow-hidden flex flex-col">
+            
+            <div class="bg-gray-50 border-b border-gray-200 px-8 py-5 flex justify-between items-center warmi-border-top">
+                <div class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="Icono" class="w-8 h-8 object-contain">
+                    <h2 class="text-xl font-bold text-gray-800">Aporte Institucional</h2>
+                </div>
+                <button id="close-donate-modal" class="text-gray-400 hover:text-gray-800 text-3xl font-bold transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200">&times;</button>
+            </div>
+            
+            <div class="p-8">
+                <div id="dynamic-impact-message" class="bg-red-50 text-red-800 p-4 rounded-xl text-center mb-8 font-medium border border-red-100 shadow-inner">
+                    Estás a punto de hacer una donación a Warmi A.M.T.S.
+                </div>
+                
+                <div class="flex bg-gray-100 rounded-xl p-1 mb-8 w-full max-w-md mx-auto" role="tablist">
+                    <button id="tab-bolivia" role="tab" aria-selected="true" class="flex-1 py-2 text-sm font-bold rounded-lg bg-white text-red-700 shadow-sm transition-all duration-300">Cuentas en Bolivia</button>
+                    <button id="tab-extranjero" role="tab" aria-selected="false" class="flex-1 py-2 text-sm font-bold rounded-lg text-gray-500 hover:text-gray-700 transition-all duration-300">Pago Internacional</button>
+                </div>
+
+                <div id="content-bolivia" role="tabpanel" class="space-y-6">
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center bg-white shadow-sm hover:border-red-300 transition-colors">
+                            <h4 class="font-bold text-gray-800 mb-4">Pago Rápido con QR</h4>
+                            <div class="p-2 border-2 border-dashed border-gray-300 rounded-xl mb-3 bg-gray-50">
+                                <img src="qrwarmi.jpg" alt="QR Banco Mercantil Warmi" class="w-40 h-40 object-contain mx-auto mix-blend-multiply">
+                            </div>
+                            <p class="text-xs text-gray-500 font-semibold">Banca Móvil de cualquier banco.</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm flex flex-col justify-center">
+                            <h4 class="font-bold text-gray-800 mb-5 border-b pb-2">Transferencia Regular</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Entidad Financiera</p>
+                                    <p class="font-bold text-gray-800 text-lg">Banco Mercantil Santa Cruz</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Cuenta en Bolivianos</p>
+                                    <p class="font-mono font-bold text-xl text-red-700 tracking-widest">[NÚMERO DE CUENTA]</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Titular de la cuenta</p>
+                                    <p class="font-bold text-gray-800 text-sm">Asociación de mujeres Trabajadoras sexuales Warmi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-center">
+                        <a href="https://wa.me/59175567752?text=Hola%20compañeras,%20acabo%20de%20realizar%20un%20aporte%20a%20WARMI%20y%20les%20envío%20el%20comprobante." target="_blank" class="inline-flex items-center justify-center gap-2 btn-warmi-primary py-3 px-8 rounded-xl font-bold text-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            Enviar comprobante de transferencia
+                        </a>
+                        <p class="text-xs text-gray-500 mt-3">*Estamos tramitando nuestra pasarela de pagos web para agilizar este proceso.*</p>
+                    </div>
+                </div>
+
+                <div id="content-extranjero" role="tabpanel" class="hidden text-center py-8 px-4">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Aportes Internacionales</h3>
+                    <p class="text-gray-600 mb-6 max-w-md mx-auto">Para garantizar la seguridad de tu donación desde el extranjero, canalizamos los aportes vía PayPal a través de nuestra red aliada o mediante giros internacionales directos.</p>
+                    <a href="mailto:bolivia@redtrasex.org?subject=Quiero apoyar a Warmi desde el extranjero" class="inline-block bg-gray-800 text-white py-3 px-8 rounded-xl font-bold hover:bg-gray-700 transition-colors shadow-md">
+                        Coordinar Donación Externa
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
     
     <script>
-        // Lógica para el menú móvil
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menú Móvil
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileMenuButton) mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-        // Lógica para el Modal de Donación
-        const donateModal = document.getElementById('donate-modal');
-        const openModalButton = document.getElementById('open-donate-modal');
-        const closeModalButton = document.getElementById('close-donate-modal');
+            // Lógica Modal con Inyección Dinámica
+            const donateModal = document.getElementById('donate-modal');
+            const dynamicMessage = document.getElementById('dynamic-impact-message');
+            const openModalButtons = document.querySelectorAll('.open-donate-modal');
+            const closeModalButton = document.getElementById('close-donate-modal');
 
-        const openModal = () => donateModal.classList.remove('hidden');
-        const closeModal = () => donateModal.classList.add('hidden');
+            if(donateModal) {
+                openModalButtons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const amount = btn.getAttribute('data-amount');
+                        const impact = btn.getAttribute('data-impact');
+                        
+                        if(amount && impact) {
+                            dynamicMessage.innerHTML = `Compañera, estás a punto de donar <strong>${amount}</strong> para <strong>${impact}</strong>. ¡Tu apoyo es nuestra fuerza!`;
+                        } else {
+                            dynamicMessage.innerHTML = "Estás a punto de hacer una donación vital a Warmi A.M.T.S.";
+                        }
 
-        openModalButton.addEventListener('click', openModal);
-        closeModalButton.addEventListener('click', closeModal);
-        
-        donateModal.addEventListener('click', (e) => {
-            if (e.target === donateModal) { closeModal(); }
-        });
-        
-        // Lógica de Pestañas en el Modal
-        const tabExtranjero = document.getElementById('tab-extranjero');
-        const tabBolivia = document.getElementById('tab-bolivia');
-        const contentExtranjero = document.getElementById('content-extranjero');
-        const contentBolivia = document.getElementById('content-bolivia');
+                        donateModal.classList.remove('hidden');
+                        setTimeout(() => {
+                            donateModal.firstElementChild.classList.remove('scale-95');
+                            donateModal.firstElementChild.classList.add('scale-100');
+                        }, 10);
+                    });
+                });
+                
+                const closeModal = () => {
+                    donateModal.firstElementChild.classList.remove('scale-100');
+                    donateModal.firstElementChild.classList.add('scale-95');
+                    setTimeout(() => donateModal.classList.add('hidden'), 300);
+                };
 
-        tabExtranjero.addEventListener('click', () => {
-            contentExtranjero.classList.remove('hidden');
-            contentBolivia.classList.add('hidden');
-            tabExtranjero.classList.add('border-red-600', 'text-gray-800');
-            tabExtranjero.classList.remove('text-gray-500');
-            tabBolivia.classList.remove('border-red-600', 'text-gray-800');
-            tabBolivia.classList.add('text-gray-500');
-        });
+                if(closeModalButton) closeModalButton.addEventListener('click', closeModal);
+                donateModal.addEventListener('click', (e) => {
+                    if (e.target === donateModal) closeModal();
+                });
+            }
+            
+            // Pestañas
+            const tabExtranjero = document.getElementById('tab-extranjero');
+            const tabBolivia = document.getElementById('tab-bolivia');
+            const contentExtranjero = document.getElementById('content-extranjero');
+            const contentBolivia = document.getElementById('content-bolivia');
 
-        tabBolivia.addEventListener('click', () => {
-            contentBolivia.classList.remove('hidden');
-            contentExtranjero.classList.add('hidden');
-            tabBolivia.classList.add('border-red-600', 'text-gray-800');
-            tabBolivia.classList.remove('text-gray-500');
-            tabExtranjero.classList.remove('border-red-600', 'text-gray-800');
-            tabExtranjero.classList.add('text-gray-500');
+            if(tabExtranjero && tabBolivia) {
+                const activeClasses = ['bg-white', 'text-red-700', 'shadow-sm'];
+                const inactiveClasses = ['text-gray-500', 'hover:text-gray-700'];
+
+                tabExtranjero.addEventListener('click', () => {
+                    contentExtranjero.classList.remove('hidden');
+                    contentBolivia.classList.add('hidden');
+                    tabExtranjero.classList.add(...activeClasses);
+                    tabExtranjero.classList.remove(...inactiveClasses);
+                    tabBolivia.classList.remove(...activeClasses);
+                    tabBolivia.classList.add(...inactiveClasses);
+                });
+
+                tabBolivia.addEventListener('click', () => {
+                    contentBolivia.classList.remove('hidden');
+                    contentExtranjero.classList.add('hidden');
+                    tabBolivia.classList.add(...activeClasses);
+                    tabBolivia.classList.remove(...inactiveClasses);
+                    tabExtranjero.classList.remove(...activeClasses);
+                    tabExtranjero.classList.add(...inactiveClasses);
+                });
+            }
         });
     </script>
 </body>
-
 </html>
-
-
