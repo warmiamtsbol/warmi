@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     
-    <!-- Estilos específicos para esta página -->
     <style>
         /* Paleta de colores para la sección de salud */
         :root {
@@ -53,10 +52,27 @@
             border-radius: 8px;
             margin: 2rem 0;
         }
+
+        /* Botón elegante de WhatsApp animado */
+        .btn-elegant-whatsapp {
+            background: linear-gradient(135deg, var(--health-dark), var(--health-main));
+            border: 2px solid white;
+            box-shadow: 0 0 15px rgba(13, 148, 136, 0.5);
+            animation: pulse-soft 2s infinite;
+        }
+        .btn-elegant-whatsapp:hover {
+            box-shadow: 0 0 25px rgba(13, 148, 136, 0.8);
+            transform: scale(1.05);
+            animation: none;
+        }
+        @keyframes pulse-soft {
+            0% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(13, 148, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+        }
     </style>
 </head>
-<body>
-    <!-- HEADER UNIFICADO -->
+<body class="text-gray-800">
     <header id="header" class="header-gradient fixed w-full top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
@@ -81,18 +97,36 @@
             </ul>
             <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden header-gradient"><ul class="flex flex-col items-center space-y-4 py-4"><li><a href="sobre.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Sobre Nosotras</a></li><li><a href="programas.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Programas</a></li><li><a href="biblioteca.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Biblioteca</a></li><li><a href="involucrate.html" class="text-white hover:text-yellow-200 font-semibold nav-link">Involúcrate</a></li></ul></div>
+        
+        <div id="mobile-menu" class="hidden md:hidden header-gradient transition-all duration-300 ease-in-out">
+            <ul class="flex flex-col items-center space-y-4 py-6">
+                <li><a href="sobre.html" class="text-white text-lg font-semibold hover:text-yellow-200">Sobre Nosotras</a></li>
+                <li><a href="programas.html" class="text-white text-lg font-semibold hover:text-yellow-200">Programas</a></li>
+                <li class="w-full text-center">
+                    <details class="group">
+                        <summary class="list-none text-white text-lg font-semibold cursor-pointer hover:text-yellow-200 flex justify-center items-center gap-2">
+                            Biblioteca 
+                            <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <ul class="mt-2 space-y-2 bg-black/10 py-2 rounded-lg mx-4">
+                            <li><a href="investigaciones.html" class="block text-white/90 text-sm hover:text-white">Investigaciones</a></li>
+                            <li><a href="noticias.html" class="block text-white/90 text-sm hover:text-white">Noticias</a></li>
+                            <li><a href="material-audiovisual.html" class="block text-white/90 text-sm hover:text-white">Multimedia</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="involucrate.html" class="text-white text-lg font-semibold hover:text-yellow-200">Involúcrate</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
-        <!-- HERO SECTION DEL PROGRAMA -->
         <section class="program-hero-salud pt-32 pb-20 text-white text-center">
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-5xl font-bold">Saber es Poder: Hablemos de Salud Sexual sin Miedo</h1>
             </div>
         </section>
 
-        <!-- CONTENIDO PRINCIPAL -->
         <div class="content-section bg-white">
             <div class="max-w-4xl mx-auto px-6 py-12">
 
@@ -120,14 +154,16 @@
                     <div class="md:col-span-1">
                         <img src="images/dr ivan.jpeg" alt="Foto del Dr. Iván Rivera" class="rounded-full w-48 h-48 mx-auto shadow-xl border-4 border-white">
                     </div>
-                    <div class="md:col-span-2">
+                    <div class="md:col-span-2 text-center md:text-left">
                         <h2 class="text-3xl font-bold mb-4" style="color: var(--health-dark);">Dr. Iván Rivera: Ciencia y Empatía a tu Servicio</h2>
                         <p class="text-gray-700 leading-relaxed">Contar con el Dr. Iván Rivera como aliado es un pilar fundamental de nuestro trabajo en salud. Como médico especialista en enfermedades infectocontagiosas y con una amplia y reconocida experiencia, el Dr. Rivera no solo aporta su conocimiento científico, sino también una profunda empatía con nuestra causa.</p>
                         <p class="text-gray-700 leading-relaxed mt-4">Gracias a su apoyo, podemos facilitar consultas especializadas con un coste mínimo y accesible, mientras trabajamos incansablemente para lograr la gratuidad total de este servicio vital.</p>
-                        <div class="mt-6">
-                             <button class="open-whatsapp-modal inline-block text-white font-bold py-3 px-6 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg" style="background-color: var(--health-dark);">
-                                Contactar un Servicio Médico
-                            </button>
+                        
+                        <div class="mt-8">
+                             <a href="https://wa.me/59172267337?text=Hola,%20quiero%20más%20información%20sobre%20las%20consultas" target="_blank" class="btn-elegant-whatsapp inline-flex items-center justify-center gap-3 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-full transition-all duration-300 ease-in-out">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.45L.057 24zM6.598 17.31c.16.273.335.525.53.75.267.304.581.55.926.727.659.325 1.397.492 2.152.493 4.226.001 7.661-3.435 7.661-7.66s-3.435-7.661-7.66-7.661-7.661 3.435-7.661 7.661c0 2.028.791 3.933 2.203 5.344L6.598 17.31z"/></svg>
+                                Contactar al Dr. Rivera
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +172,7 @@
                     <h2 class="text-2xl font-bold mb-2" style="color: var(--health-dark);">Nuestra Red de Apoyo para tu Bienestar</h2>
                     <p class="text-lg">Entendemos que el cuidado de la salud requiere de una red sólida. Por eso, hemos establecido un convenio clave con el <strong>Laboratorio Vida Sana</strong>. Además, estamos en constantes mesas de diálogo para ampliar nuestra red de alianzas con otras instituciones y profesionales comprometidos.</p>
                 </div>
-                
+        
                 <div class="text-white p-8 rounded-lg my-12 text-center" style="background-color: var(--health-dark);">
                     <h2 class="text-3xl font-bold text-white mb-2">Ayúdanos a Cuidarlas: Nuestra Meta Urgente</h2>
                     <p class="mb-6">Para que nuestro trabajo sea sostenible y llegue a todas, necesitamos el apoyo de la comunidad. Hoy, nuestra búsqueda de financiamiento se centra en dos objetivos críticos:</p>
@@ -159,15 +195,25 @@
                 <div class="text-center border-t pt-8">
                     <h3 class="text-2xl font-bold">¿Necesitas Orientación Médica? Contáctanos.</h3>
                     <p class="text-gray-600 my-4">Si tienes dudas o quieres saber cómo acceder a una consulta con el Dr. Rivera o a los servicios de laboratorio, estamos aquí para ayudarte. Escríbenos a nuestro contacto directo. Te orientaremos de forma segura, privada y sin juicios.</p>
-                    <button class="open-whatsapp-modal inline-block text-white font-bold py-3 px-8 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg" style="background-color: var(--health-dark);">
+                    
+                    <a href="https://wa.me/59172267337?text=Hola,%20quiero%20más%20información%20sobre%20las%20consultas" target="_blank" class="btn-elegant-whatsapp mt-4 inline-flex items-center gap-3 text-white font-bold text-lg py-3 px-8 rounded-full transition-all duration-300 ease-in-out">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.45L.057 24zM6.598 17.31c.16.273.335.525.53.75.267.304.581.55.926.727.659.325 1.397.492 2.152.493 4.226.001 7.661-3.435 7.661-7.66s-3.435-7.661-7.66-7.661-7.661 3.435-7.661 7.661c0 2.028.791 3.933 2.203 5.344L6.598 17.31z"/></svg>
                         Escribir por WhatsApp
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer id="contacto" class="bg-gray-800 text-white py-12"><div class="container mx-auto px-6 text-center"><p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p><p class="text-gray-400"><strong>Email:</strong> <a href="mailto:contacto@warmiamts.org" class="hover:text-red-400">contacto@warmiamts.org</a></p><div class="mt-8 border-t border-gray-700 text-center py-6"><p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p></div></div></footer>
+    <footer id="contacto" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 mb-2"><strong>Dirección:</strong> Calle Pojo entre Moxos y 6 de agosto, Cochabamba, Bolivia.</p>
+            <p class="text-gray-400"><strong>Email:</strong> <a href="mailto:bolivia@redtrasex.org" class="hover:text-red-400">bolivia@redtrasex.org</a></p>
+            <div class="mt-8 border-t border-gray-700 text-center py-6">
+                <p class="text-gray-500 text-sm">&copy; 2024 Warmi Amts. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
     
     <script src="main.js"></script>
 </body>
