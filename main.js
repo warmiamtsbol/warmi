@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Nota: la lógica del modal de donación, el modal de WhatsApp y las pestañas
+    // vive en el <script> propio de cada página (index.html, involucrate.html),
+    // porque sus IDs/clases no son uniformes entre páginas. Aquí solo va lo
+    // verdaderamente común a todo el sitio: menú móvil y carrusel.
+
     // Lógica para el Carrusel de Perspectiva (CORREGIDA Y MEJORADA CON LOOP)
     const carouselContainer = document.querySelector('.perspective-carousel-container');
     if (carouselContainer) {
