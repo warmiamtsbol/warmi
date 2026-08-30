@@ -361,3 +361,71 @@ h1, h2, h3, h4, h5, h6 {
 
     z-index: -1; /* Coloca el borde detrás de la tarjeta */
 }
+
+/* === TARJETAS DE INVESTIGACIONES/DOCUMENTOS (más accesibles) === */
+.doc-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #DA291C;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.doc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.doc-card-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #fee2e2;
+    color: #DA291C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doc-card-icon svg {
+    width: 26px;
+    height: 26px;
+}
+.doc-card-body {
+    min-width: 0;
+}
+.doc-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.doc-btn {
+    display: inline-block;
+    font-weight: 700;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.doc-btn:focus-visible {
+    outline: 3px solid #FFC72C;
+    outline-offset: 2px;
+}
+.doc-btn-primary {
+    background-color: #DA291C;
+    color: #ffffff;
+}
+.doc-btn-primary:hover {
+    background-color: #b91c1c;
+}
+.doc-btn-secondary {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+.doc-btn-secondary:hover {
+    background-color: #e5e7eb;
+}
