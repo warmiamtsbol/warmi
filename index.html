@@ -244,16 +244,14 @@
         </div>
     </footer>
     
-    <div id="informe-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="informe-modal-title">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-auto relative overflow-hidden text-center" style="border-top: 6px solid #7e22ce;">
-            <button id="close-informe-modal" class="absolute top-3 right-4 text-gray-400 hover:text-gray-800 text-3xl font-bold transition-colors" aria-label="Cerrar aviso">&times;</button>
-            <div class="p-8 pt-10">
-                <div class="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center" style="background-color:#f3e8ff; color:#7e22ce;">
-                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z" /></svg>
-                </div>
-                <h2 id="informe-modal-title" class="text-xl md:text-2xl font-bold text-gray-900 mb-3 font-['Poppins']">Ya puedes acceder a nuestro informe de nuestras acciones en el Trópico</h2>
-                <p class="text-gray-600 mb-6">Hallazgos de nuestra intervención territorial en Entre Ríos: evidencia, testimonios y recomendaciones.</p>
-                <a href="informe-entre-rios.html" class="inline-block text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105" style="background-color:#7e22ce;">
+    <div id="informe-modal" class="informe-modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="informe-modal-title">
+        <div id="informe-modal-card" class="informe-modal-card">
+            <button id="close-informe-modal" class="informe-modal-close" aria-label="Cerrar aviso">&times;</button>
+            <div class="informe-modal-image" style="background-image: url('images/portada-informe-entre-rios.jpg');"></div>
+            <div class="informe-modal-glass">
+                <h2 id="informe-modal-title" class="text-xl md:text-2xl font-bold text-white mb-2 font-['Poppins']">Ya puedes acceder a nuestro informe de nuestras acciones en el Trópico</h2>
+                <p class="text-white text-opacity-90 text-sm mb-5">Hallazgos de nuestra intervención territorial en Entre Ríos: evidencia, testimonios y recomendaciones.</p>
+                <a href="docs/Informe de Vulneración de Derechos - Entre Ríos (WARMI 2026).pdf" target="_blank" rel="noopener noreferrer" class="informe-modal-btn">
                     Ver el informe
                 </a>
             </div>
@@ -345,19 +343,37 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Lógica Modal Informe Entre Ríos (aparece una vez por visita)
+            // Lógica Modal Informe Entre Ríos (aparece una vez por visita, con animación fluida)
             const informeModal = document.getElementById('informe-modal');
+            const informeModalCard = document.getElementById('informe-modal-card');
             const closeInformeModal = document.getElementById('close-informe-modal');
-            if (informeModal) {
+            if (informeModal && informeModalCard) {
                 let alreadyShown = false;
                 try { alreadyShown = sessionStorage.getItem('informeEntreRiosShown') === '1'; } catch (e) {}
+
+                const openInforme = () => {
+                    informeModal.classList.remove('hidden');
+                    informeModal.classList.add('flex');
+                    requestAnimationFrame(() => {
+                        informeModal.classList.add('is-visible');
+                    });
+                };
+
+                const closeInforme = () => {
+                    informeModal.classList.remove('is-visible');
+                    setTimeout(() => {
+                        informeModal.classList.add('hidden');
+                        informeModal.classList.remove('flex');
+                    }, 400);
+                };
+
                 if (!alreadyShown) {
                     setTimeout(() => {
-                        informeModal.classList.remove('hidden');
+                        openInforme();
                         try { sessionStorage.setItem('informeEntreRiosShown', '1'); } catch (e) {}
                     }, 1200);
                 }
-                const closeInforme = () => informeModal.classList.add('hidden');
+
                 if (closeInformeModal) closeInformeModal.addEventListener('click', closeInforme);
                 informeModal.addEventListener('click', (e) => {
                     if (e.target === informeModal) closeInforme();
